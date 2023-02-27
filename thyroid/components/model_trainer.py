@@ -21,9 +21,8 @@ class ModelTrainer:
     def train_model(self, x, y):
         try:
             xgb_clf = XGBClassifier(objective='multi:softmax', 
-                            num_class=4,  
-                            early_stopping_rounds=15, 
-                            eval_metric=['merror','mlogloss'], 
+                            num_class=4,   
+                         
                             seed=42)
             xgb_clf.fit(x,y)
             return xgb_clf
