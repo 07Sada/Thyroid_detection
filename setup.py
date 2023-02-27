@@ -16,7 +16,7 @@ def get_requirements()->List[str]:
     return requirement_list
 
 setup(
-    name="Sensor", 
+    name="Thyroid_dieases", 
     author="Sada",
     version="0.0.1",
     author_email="sadashiv.nandanikar07@gmail.com",
