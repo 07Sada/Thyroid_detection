@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+
+.container {
+  position: relative;
+  max-width: 1050px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* to bring the box in single line */
+.input-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+
+.input-box input,
+.input-box select {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.on_thyroxine,
+.query_on_thyroxine,
+.on_antithyroid_medication,
+.sick,
+.pregnant,
+.thyroid_surgery,
+.I131_treatment,
+.query_hypothyroid,
+.query_hyperthyroid,
+.lithium,
+.goitre,
+.tumor,
+.psych,
+.hypopituitary,
+.sex,
+.select-box
+{
+  display: inline-block;
+  flex-wrap: wrap;
+  width: 30%;
+  padding: 1px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.on_thyroxine select,
+.query_on_thyroxine select,
+.on_antithyroid_medication select,
+.sick select,
+.pregnant select ,
+.thyroid_surgery select,
+.I131_treatment select,
+.query_hypothyroid select,
+.lithium select,
+.goitre select,
+.tumor select,
+.psych select,
+.hypopituitary select,
+.sex select,
+.select-box select,
+.query_hyperthyroid select
+{
+  padding: 0px;
+  font-size: 15px;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin-left: 2%;
+  height: 25px;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.prediction {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+.submit input[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.age input,
+.T3 input,
+.TT4 input,
+.T4U input,
+.FTI input
+{
+  width: 80px;
+  height: 30px;
+}
+
+.age{
+  font-size: large;
+}
+
+.T3,
+.TT4,
+.T4U,
+.FTI
+{
+  font-size:large;
+  margin-left: 70px;
+}

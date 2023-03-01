@@ -4,129 +4,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/style.css" />
     <title>Thyroid Dieases Detection</title>
 </head>
 <body>
-    <h2>Enter the following information:</h2>
+    <section class="container">
+    <header>Enter the following information:</header>
 
-	<form action="/predict" method="POST">
+	<form action="/predict" method="POST",class='form'>
 		
-		<label for="age">Age:</label>
-		<input type="number" id="age" name="age"><br><br>
-
-		<label for="T3">T3:</label>
-		<input type="number" id="T3" name="T3" step="0.01"><br><br>
-
-		<label for="TT4">TT4:</label>
-		<input type="number" id="TT4" name="TT4" step="0.01"><br><br>
-
-		<label for="T4U">T4U:</label>
-		<input type="number" id="T4U" name="T4U" step="0.01"><br><br>
-
-		<label for="FTI">FTI:</label>
-		<input type="number" id="FTI" name="FTI" step="0.01"><br><br>
-
-		<label for="on_thyroxine">On Thyroxine:</label>
-		<select id="on_thyroxine" name="on_thyroxine">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
-
-		<label for="query_on_thyroxine">Query On Thyroxine:</label>
-		<select id="query_on_thyroxine" name="query_on_thyroxine">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
-
-		<label for="on_antithyroid_medication">On Antithyroid Medication:</label>
-		<select id="on_antithyroid_medication" name="on_antithyroid_medication">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
-
-		<label for="sick">Sick:</label>
-		<select id="sick" name="sick">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
-
-		<label for="pregnant">Pregnant:</label>
-		<select id="pregnant" name="pregnant">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
-
-		<label for="thyroid_surgery">Thyroid Surgery:</label>
-		<select id="thyroid_surgery" name="thyroid_surgery">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
-
-		<label for="I131_treatment">I131 Treatment:</label>
-		<select id="I131_treatment" name="I131_treatment">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
-
-		<label for="query_hypothyroid">Query Hypothyroid:</label>
-		<select id="query_hypothyroid" name="query_hypothyroid">
-			<option value="f">No</option>
-			<option value="t">Yes</option>
-		</select><br><br>
+		<div class="input-box">
+        	<div class="age">
+				<label for="age">Age:</label>
+				<input type="number" id="age" name="age"><br>
+        	</div>
 
 		
-		<div>
-			<div style="display: inline-block;">
-		<label for="lithium">Lithium:</label>
-		<select id="lithium" name="lithium">
+        <div class = 'T3'>
+			<label for="T3">T3:</label>
+			<input type="number" id="T3" name="T3" step="0.01"><br>
+        </div>
+
+		<div class = 'TT4'>
+			<label for="TT4">TT4:</label>
+				<input type="number" id="TT4" name="TT4" step="0.01"><br><br>
+		</div>
+		
+			
+		<div class = 'T4U'>
+			<label for="T4U">T4U:</label>
+				<input type="number" id="T4U" name="T4U" step="0.01"><br><br>
+		</div>
+			
+		<div class = 'FTI'>
+			<label for="FTI">FTI:</label>
+				<input type="number" id="FTI" name="FTI" step="0.01"><br><br>
+		</div> 
+
+		
+	</div>
+		<div class = 'on_thyroxine'>
+		 <label for="on_thyroxine">On Thyroxine:</label>
+		  <select id="on_thyroxine" name="on_thyroxine">
 			<option value="f">No</option>
 			<option value="t">Yes</option>
-		</select><br><br>
+		 </select><br><br>
+		</div>
 
-		<label for="goitre">Goitre:</label>
-		<select id="goitre" name="goitre">
+		<div class = 'query_on_thyroxine'>
+			<label for="query_on_thyroxine">Query On Thyroxine:</label>
+			<select id="query_on_thyroxine" name="query_on_thyroxine">
+				<option value="f">No</option>
+				<option value="t">Yes</option>
+			</select><br><br>
+		</div>
+		
+        <div class = 'on_antithyroid_medication'>
+		 <label for="on_antithyroid_medication">On Antithyroid Medication:</label>
+		  <select id="on_antithyroid_medication" name="on_antithyroid_medication">
 			<option value="f">No</option>
 			<option value="t">Yes</option>
-		</select><br><br>
+		  </select><br><br>
+        </div>
 
-		<label for="tumor">Tumor:</label>
-		<select id="tumor" name="tumor">
+        <div class = 'sick'>
+		 <label for="sick">Sick:</label>
+		  <select id="sick" name="sick">
+			 <option value="f">No</option>
+			 <option value="t">Yes</option>
+		  </select><br><br>
+        </div>
+
+        <div class = 'pregnant'>
+		 <label for="pregnant">Pregnant:</label>
+		  <select id="pregnant" name="pregnant">
 			<option value="f">No</option>
 			<option value="t">Yes</option>
-		</select><br><br>
+		  </select><br><br>
+        </div>
 
-		<label for="psych">Psych:</label>
-		<select id="psych" name="psych">
+        <div class = 'thyroid_surgery'>
+		 <label for="thyroid_surgery">Thyroid Surgery:</label>
+		  <select id="thyroid_surgery" name="thyroid_surgery">
 			<option value="f">No</option>
 			<option value="t">Yes</option>
-		</select><br><br>
+		  </select><br><br>
+        </div>
 
-		<label for="hypopituitary">Hypopituitary:</label>
-		<select id="hypopituitary" name="hypopituitary">
+        <div class = 'I131_treatment'>
+		 <label for="I131_treatment">I131 Treatment:</label>
+		  <select id="I131_treatment" name="I131_treatment">
 			<option value="f">No</option>
 			<option value="t">Yes</option>
-		</select><br><br>
+		  </select><br><br>
+        </div>
+        
+        <div class = 'query_hypothyroid'>
+		 <label for="query_hypothyroid">Query Hypothyroid:</label>
+		  <select id="query_hypothyroid" name="query_hypothyroid">
+			<option value="f">No</option>
+			<option value="t">Yes</option>
+		  </select><br><br>
+		</div>
 
-		<label for="sex">Sex:</label>
-		<select id="sex" name="sex">
+		<div class = 'query_hyperthyroid'>
+		 <label for="query_hyperthyroid">Query Hyperthyroid:</label> 
+		  <select id="query_hyperthyroid" name="query_hyperthyroid">
+			<option value="f">No</option>
+			<option value="t">Yes</option>
+		 </select><br><br>
+		</div>
+
+        <div class = 'lithium'>
+		 <label for="lithium">Lithium:</label>
+		  <select id="lithium" name="lithium">
+			<option value="f">No</option>
+			<option value="t">Yes</option>
+		  </select><br><br>
+		</div>
+	
+		<div class = 'goitre'>
+		 <label for="goitre">Goitre:</label>
+		  <select id="goitre" name="goitre">
+			<option value="f">No</option>
+			<option value="t">Yes</option>
+		  </select><br><br>
+		</div>
+	
+		<div class = 'tumor'>
+		 <label for="tumor">Tumor:</label>
+		  <select id="tumor" name="tumor">
+			<option value="f">No</option>
+			<option value="t">Yes</option>
+		  </select><br><br>
+		</div>
+	
+		<div class = 'psych'>
+		 <label for="psych">Psych:</label>
+		  <select id="psych" name="psych">
+			<option value="f">No</option>
+			<option value="t">Yes</option>
+		  </select><br><br>
+		</div>
+	
+		<div class = 'hypopituitary'>
+		 <label for="hypopituitary">Hypopituitary:</label>
+		  <select id="hypopituitary" name="hypopituitary">
+			<option value="f">No</option>
+			<option value="t">Yes</option>
+		  </select><br><br>
+		</div>
+	
+		<div class = 'sex'>
+		 <label for="sex">Sex:</label>
+		  <select id="sex" name="sex">
 			<option value="F">Female</option>
 			<option value="M">Male</option>
-		</select><br><br>
-
-		<label for="referral_source">Referral Source:</label>
-		<select id="referral_source" name="referral_source">
+		  </select><br><br>
+		</div>
+	
+		<div class="select-box">
+		 <label for="referral_source">Referral Source:</label>
+		  <select id="referral_source" name="referral_source">
 			<option value="SVI">SVI</option>
 			<option value="SVHC">SVHC</option>
-			<option value="other">Other</option>
 			<option value="SVHD">SVHD</option>
 			<option value="STMW">STMW</option>
-		</select><br><br>
-
-		<input type="submit" value="Submit">
-
+			<option value="other">Other</option>
+		  </select><br><br>
+		</div>
+	</div>
+	  
+        <div class = 'submit'>
+			<input type="submit" value="Submit">
+        </div>
+        
+        <div class = 'prediction'>
+        	<p>
+            	Prediction of the model is {{prediction}}
+        	</p>
+        </div>
 	</form>
-      <p>
-		Prediction of the model is {{prediction}}
-	  </p>
+
+    </section>
 </body>
 </html>
