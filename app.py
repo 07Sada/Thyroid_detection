@@ -76,10 +76,14 @@ def predict():
             'FTI': [FTI],
             'referral_source': [referral_source]
         })
-        input_arr = transformer.transform(data)
-        y_pred = model.predict(input_arr)
-        prediction = target_encoder.inverse_transform(y_pred)
-        return render_template('index.html', prediction=prediction if request.method == 'POST' else '')
+        if request.method == 'POST':
+            input_arr = transformer.transform(data)
+            y_pred = model.predict(input_arr)
+            prediction = target_encoder.inverse_transform(y_pred)
+            return render_template('index.html', prediction=prediction)
+        else:
+            return render_template('index.html', prediction="")
+
     
     except Exception as e:
         raise ThyroidException(e, sys)

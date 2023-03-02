@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 from typing import List
 
-REQUIREMENT_FILE_NAME = 'requirements.txt'
-HYPHEN_E_DOT ="-e ."
+REQUIREMENT_FILE_NAME="requirements.txt"
+HYPHEN_E_DOT = "-e ."
 
 def get_requirements()->List[str]:
 
@@ -16,10 +16,10 @@ def get_requirements()->List[str]:
     return requirement_list
 
 setup(
-    name="Thyroid_dieases", 
-    author="Sada",
+    name="Thyroid_dieases",
     version="0.0.1",
+    author="Sada",
     author_email="sadashiv.nandanikar07@gmail.com",
-    packages=find_packages(),
-    requires=get_requirements()
-)
+    packages = find_packages(),
+    install_requires=get_requirements(),
+)    

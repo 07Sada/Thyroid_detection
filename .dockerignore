@@ -1,0 +1,9 @@
+artifact
+logs
+notebook
+prediction
+.env
+data_dump.py
+hypothyroid.csv
+input.csv
+README.md
